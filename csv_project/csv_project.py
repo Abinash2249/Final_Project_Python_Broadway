@@ -114,8 +114,8 @@ filename = "survey_results_public.csv"
 
 with open(filename, "r", encoding='utf-8') as cr:
     responses = csv.DictReader(cr)
-    for index, response in enumerate(responses):
-        if index >= 50:
+    for count, response in enumerate(responses):
+        if count >= 50:
             break
 
         sql = f"""
